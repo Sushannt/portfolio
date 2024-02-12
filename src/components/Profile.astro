@@ -1,0 +1,12 @@
+---
+import { Image } from "astro:assets";
+import profile from "../assets/images/Sushannt.png";
+---
+
+<Image
+  src={profile}
+  alt="Sushant"
+  width={profile.width / 3}
+  loading="eager"
+  class="rounded-full py-5"
+/>

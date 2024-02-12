@@ -1,0 +1,27 @@
+---
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import NavListItem from "./NavListItem.astro";
+---
+
+<header
+  class="lg:flex px-8 md:px-5 py-5 gap-5 bg-teal-900/50 backdrop-blur-sm border-b border-b-teal-700 min-h-[10vh] fixed top-0 left-0 w-full z-20 font-Satoshi-M"
+>
+  <Astronav>
+    <div class="flex w-full justify-between">
+      <a href="/" class="text-fiord-200 text-2xl font-Satoshi-B">SUSHANT</a>
+      <div class="block md:hidden">
+        <MenuIcon class="w-6 h-6 text-fiord-300" />
+      </div>
+    </div>
+    <MenuItems class="hidden lg:flex text-right">
+      <ul
+        class="flex flex-col lg:flex-row lg:gap-8 text-lg md:text-xl uppercase text-center"
+      >
+        <NavListItem listItem={"home"} />
+        <NavListItem listItem={"about"} />
+        <NavListItem listItem={"projects"} />
+        <NavListItem listItem={"contact"} />
+      </ul>
+    </MenuItems>
+  </Astronav>
+</header>

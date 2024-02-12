@@ -1,0 +1,29 @@
+[
+  {
+    "type": "Front End",
+    "icons": [
+      { "bootstrap": "frontendIcons/Bootstrap" },
+      { "css": "frontendIcons/CSS" },
+      { "astro": "frontendIcons/astro" },
+      { "html": "frontendIcons/HTML" },
+      { "js": "frontendIcons/JS" },
+      { "react": "frontendIcons/React" },
+      { "redux": "frontendIcons/Redux" },
+      { "sass": "frontendIcons/Sass" },
+      { "tailwind": "frontendIcons/TailwindCSS" },
+      { "vue": "frontendIcons/Vue" }
+    ]
+  },
+  {
+    "type": "Back End",
+    "icons": [
+      { "express": "backendIcons/Express" },
+      { "mongodb": "backendIcons/MongoDB" },
+      { "bash": "backendIcons/Bash" },
+      { "git": "backendIcons/Git" },
+      { "mysql": "backendIcons/MySql" },
+      { "node": "backendIcons/Node" },
+      { "postman": "backendIcons/Postman" }
+    ]
+  }
+]

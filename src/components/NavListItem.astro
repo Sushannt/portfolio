@@ -1,0 +1,11 @@
+---
+const { listItem } = Astro.props;
+---
+
+<li>
+  <a
+    href={`#${listItem}`}
+    class="hover:text-amber-200/75 hover:md:underline underline-offset-8 decoration-amber-200/75 uppercase"
+    >{listItem}</a
+  >
+</li>

@@ -1,0 +1,20 @@
+---
+const { aboutMe, icon } = Astro.props;
+import { Icon } from "astro-icon/components";
+---
+
+<div
+  class={"select-all font-mono bg-burnt-sienna-300/25 hover:shadow-md hover:shadow-amber-300/50 hover:text-amber-300 p-1 md:p-0 mt-5 rounded-md text-center drop-shadow-2xl text-wrap overflow-hidden flex flex-col justify-center"}
+>
+  <Icon
+    name={icon}
+    class="size-8 md:size-12 mt-1 md:mt-2 rounded-full mx-auto"
+  />
+  <h1 class="custom-font inline-block">{aboutMe}</h1>
+</div>
+
+<style>
+  .custom-font {
+    font-size: clamp(2rem, -0.343rem + 5.116vw, 2.75rem);
+  }
+</style>

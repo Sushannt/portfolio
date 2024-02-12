@@ -1,0 +1,72 @@
+---
+import { Image } from "astro:assets";
+const { title, link, techUsed, repo, preview, previewAlt } = Astro.props;
+
+import ecomshop from "../assets/images/ecomshop.png";
+import mortgage_calculator from "../assets/images/mortgage-calculator.png";
+import react_auth_ui from "../assets/images/react-auth-ui.png";
+import vue_tasklist from "../assets/images/vue-tasklist.png";
+
+const imgObjContainer = {
+  ecomshop,
+  mortgage_calculator,
+  react_auth_ui,
+  vue_tasklist,
+};
+---
+
+<div
+  class="bg-fiord-900/75 text-fiord-50 border-2 border-fiord-800 rounded-md p-5 shadow-sm shadow-fiord-700"
+>
+  <a href={link} aria-label={previewAlt}>
+    <Image
+      src={imgObjContainer[preview]}
+      width={350}
+      height={400}
+      alt="project look"
+      class="rounded-md mx-auto border-2 border-fiord-300"
+    />
+  </a>
+  <table class="table-auto">
+    <thead>
+      <tr>
+        <th colspan="2" class="text-center py-5">
+          <h2 class="text-xl tracking-wider font-Satoshi-B">{title}</h2>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="font-Satoshi-M"> Project link: </td>
+        <td>
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <button
+              class="py-1 px-2 bg-blue-500 rounded-sm hover:bg-blue-400 hover:scale-105 font-Satoshi-M"
+              >Visit ↗️</button
+            >
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td class="font-Satoshi-M"> Technologies Used: </td>
+        <td class="font-Satoshi-R">
+          {techUsed}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="text-right mt-5">
+    <a
+      href={repo}
+      aria-label="learn more about the project"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <button
+        class="bg-teal-600/50 py-1 px-2 hover:bg-teal-700 hover:shadow-sm hover:shadow-teal-700 rounded-md font-Satoshi-M"
+        >Visit the github repo</button
+      >
+    </a>
+  </div>
+</div>

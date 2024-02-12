@@ -1,0 +1,34 @@
+[
+  {
+    "title": "E-COMMERCE APP - MyShop",
+    "preview-image": "ecomshop",
+    "preview-alt": "preview of e-commerce app",
+    "host-link": "https://my-shop-isushaant.vercel.app/",
+    "repo-link": "https://github.com/Sushannt/MyShop",
+    "technologies-used": "React.js, Tailwind CSS, Keep-React, Redux Toolkit, dummyJSON"
+  },
+  {
+    "title": "MORTGAGE CALCULATOR",
+    "preview-image": "mortgage_calculator",
+    "preview-alt": "preview of mortgage calculator app",
+    "host-link": "https://mortgage-calculator-isushaant.vercel.app/",
+    "repo-link": "https://github.com/Sushannt/Mortgage-Calculator",
+    "technologies-used": "React.js, Tailwind CSS, Vite, Chart.js"
+  },
+  {
+    "title": "TASKLIST APP",
+    "preview-image": "vue_tasklist",
+    "preview-alt": "preview of Vue Tasklist App",
+    "host-link": "https://vue-task-list-lake.vercel.app/",
+    "repo-link": "https://github.com/Sushannt/Vue-Task-List",
+    "technologies-used": "Vue.js, Vue-Composition-Api, Tailwind CSS, Vite"
+  },
+  {
+    "title": "REACT AUTH APP",
+    "preview-image": "react_auth_ui",
+    "preview-alt": "preview of React Auth UI",
+    "host-link": "https://react-auth-app-tan.vercel.app/",
+    "repo-link": "https://github.com/Sushannt/React-Auth-App",
+    "technologies-used": "React.js, Tailwind CSS, Keep-React, React-Router-Dom, ContextAPI, phosphor-icons"
+  }
+]
