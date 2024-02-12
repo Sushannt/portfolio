@@ -8,10 +8,10 @@ This project showcases my portfolio website, demonstrating the seamless integrat
 
 ## Features
 
-✨ Dynamic functionality combined with static site speed.
-🎨 Sleek and modern design powered by Tailwind CSS.
-⚡️ Lightning-fast performance with a perfect 100% score on Chrome Lighthouse.
-📱 Responsive layout ensures optimal viewing across all devices.
+- ✨ Dynamic functionality combined with static site speed.
+- 🎨 Sleek and modern design powered by Tailwind CSS.
+- ⚡️ Lightning-fast performance with a perfect 100% score on Chrome Lighthouse.
+- 📱 Responsive layout ensures optimal viewing across all devices.
 
 ## Getting Started
 
