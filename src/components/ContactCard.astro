@@ -4,9 +4,11 @@ import { Icon } from "astro-icon/components";
 const { icon, href, title } = Astro.props;
 ---
 
-<div
-  class="flex items-center gap-x-3 md:gap-x-5 bg-fiord-800 rounded-md px-2 py-1 hover:text-lime-300 hover:border-2 border-lime-300/50 font-Satoshi-M"
->
-  <Icon name={`contact/${icon}`} class="size-12 md:size-16" />
-  <a href={href} class="text-md md:text-2xl tracking-wide truncate">{title}</a>
-</div>
+<a href={href} class="text-md md:text-2xl tracking-wide truncate">
+  <div
+    class="flex items-center gap-x-3 md:gap-x-5 bg-fiord-800 rounded-md px-2 py-1 hover:text-lime-300 hover:border-2 border-lime-300/50 font-Satoshi-M"
+  >
+    <Icon name={`contact/${icon}`} class="size-12 md:size-16" />
+    {title}
+  </div>
+</a>
