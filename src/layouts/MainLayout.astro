@@ -1,7 +1,7 @@
 ---
 import MainHead from "./MainHead.astro";
 import Nav from "../components/Nav.astro";
-import Footer from "../pages/sections/Footer.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/main.css";
 
 const { title, seoDesc, seoTitle } = Astro.props;
@@ -9,7 +9,7 @@ const { title, seoDesc, seoTitle } = Astro.props;
 
 <html lang="en">
   <MainHead title={title} seoTitle={seoTitle} seoDesc={seoDesc} />
-  <body class="bg-fiord-950 text-fiord-50 flex flex-col relative">
+  <body class="flex flex-col relative">
     <Nav />
     <slot />
     <Footer />
@@ -20,10 +20,10 @@ const { title, seoDesc, seoTitle } = Astro.props;
         box-sizing: border-box;
       }
 
-      html {
-        scroll-behavior: smooth;
-        scroll-padding: 10vh;
-      }
+      /* html {
+    scroll-behavior: smooth;
+    scroll-padding: 10vh;
+  } */
 
       body {
         min-height: 100vh;

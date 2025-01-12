@@ -8,6 +8,7 @@
       { "html": "frontendIcons/HTML" },
       { "js": "frontendIcons/JS" },
       { "react": "frontendIcons/React" },
+      { "next": "frontendIcons/Nextjs" },
       { "redux": "frontendIcons/Redux" },
       { "sass": "frontendIcons/Sass" },
       { "tailwind": "frontendIcons/TailwindCSS" },

@@ -1,0 +1,145 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ContactCard from "../components/ContactCard.astro";
+const ACCESSKEY = import.meta.env.ACCESSKEY;
+---
+
+<MainLayout
+  title="Sushant's Portfolio"
+  seoTitle="Sushant Kumar, FullStack Developer Portfolio"
+  seoDesc="FullStack Developer, expertise in React, Node, MongoDB, MySql, Astro, Vue"
+>
+  <section class="min-h-[70vh] md:min-h-[90vh] mt-[10vh]" id="contact">
+    <div class="w-10/12 mx-auto text-right">
+      <h1
+        class="custom-font-size mt-10 text-orange-300 inline-block bg-amber-100/25 rounded-md font-Satoshi-B"
+      >
+        {"<"} CONTACT 😎{"/>"}
+      </h1>
+
+      <div
+        class="w-full grid grid-cols-1 md:grid-cols-2 gap-10 mt-[10vh] text-left"
+      >
+        <div class="flex flex-col gap-y-5 w-full md:w-3/4 mx-auto">
+          <ContactCard
+            icon={"phone"}
+            href={"tel:+91 7888428405"}
+            title={"+91 7888428405"}
+          />
+          <ContactCard
+            icon={"email"}
+            href={"mailto:isushaant@gmail.com"}
+            title={"isushaant@gmail.com"}
+          />
+          <ContactCard
+            icon={"location"}
+            href={"https://www.google.com/maps?q=30.3120449,78.0630175"}
+            title={"Dehradun, Uttarakhand"}
+          />
+        </div>
+        <div class="w-full md:w-3/4 mx-auto">
+          <div class="text-center md:text-left">
+            <h2 class="text-xl text-lime-200">Send a Message</h2>
+          </div>
+          <form method="post" id="form" class="flex flex-col text-black">
+            <div class="space-y-6 md:space-y-8">
+              <!-- special input -->
+              <input type="hidden" name="access_key" value={ACCESSKEY} />
+
+              <fieldset class="flex flex-col gap-y-1">
+                <label for="name" class="text-fiord-50 font-Satoshi-M"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  class="bg-fiord-100/75 focus:bg-amber-50 rounded-md py-2 px-4 focus:outline-fiord-300/25 font-Satoshi-M"
+                />
+              </fieldset>
+              <fieldset class="flex flex-col gap-y-1">
+                <label for="email" class="text-fiord-50 font-Satoshi-M"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  inputmode="email"
+                  class="bg-fiord-100/75 focus:bg-amber-50 rounded-md py-2 px-4 focus:outline-fiord-500 font-Satoshi-M"
+                  required
+                />
+              </fieldset>
+              <fieldset class="flex flex-col gap-y-1">
+                <label for="message" class="text-fiord-50 font-Satoshi-M"
+                  >Message</label
+                >
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="5"
+                  class="bg-fiord-100/75 focus:bg-amber-50 rounded-md py-2 px-4 focus:outline-fiord-500 font-Satoshi-M"
+                  required></textarea>
+              </fieldset>
+              <button
+                type="submit"
+                class="px-2 py-1 rounded-md bg-blue-500/75 hover:bg-blue-400 text-fiord-50 w-full"
+                id="result">Submit</button
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .custom-font-size {
+      font-size: clamp(1.5rem, 1.279rem + 2.745vw, 2.75rem);
+    }
+  </style>
+
+  <script is:inline>
+    const form = document.getElementById("form");
+    const result = document.getElementById("result");
+
+    form.addEventListener("submit", function (e) {
+      const formData = new FormData(form);
+      e.preventDefault();
+
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      result.innerHTML = "Please wait...";
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      })
+        .then(async (response) => {
+          let json = await response.json();
+          if (response.status == 200) {
+            result.innerHTML = json.message;
+          } else {
+            console.log(response);
+            result.innerHTML = json.message;
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+          result.innerHTML = "Something went wrong!";
+        })
+        .then(function () {
+          form.reset();
+          setTimeout(() => {
+            result.style.display = "none";
+          }, 3000);
+        });
+    });
+  </script>
+</MainLayout>
