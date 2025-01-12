@@ -1,0 +1,29 @@
+---
+import StackContainer from "../../components/Stack.astro";
+import iconData from "../../data/stackData.json";
+
+const frontendIcons = iconData[0].icons;
+const backendIcons = iconData[1].icons;
+---
+
+<section class="min-h-[70vh] md:min-h-[90vh] mt-[5vh] w-full">
+  <div class="w-10/12 mx-auto pr-5 md:pr-0 flex flex-col justify-center">
+    <h2
+      class="text-3xl text-amber-500 text-right md:text-center tracking-widest underline underline-offset-4 decoration-2 decoration-pink-500/75 font-Satoshi-BLK"
+    >
+      Tech Skills
+    </h2>
+    <div
+      class="w-full grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-4 mx-auto mt-[5vh]"
+    >
+      {/* Front End Section */}
+      <StackContainer
+        containerTitle={"Front End"}
+        selectIcons={frontendIcons}
+      />
+
+      {/* Back End Section */}
+      <StackContainer containerTitle={"Back End"} selectIcons={backendIcons} />
+    </div>
+  </div>
+</section>

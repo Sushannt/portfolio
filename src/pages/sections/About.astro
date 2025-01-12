@@ -1,0 +1,51 @@
+---
+import Card from "../../components/Card.astro";
+---
+
+<section
+  class="min-h-[70vh] md:min-h-[90vh] mt-[10vh] w-full bg-teal-950/25 text-right"
+  id="about"
+>
+  <div class="w-10/12 mx-auto">
+    <h1
+      class="custom-font-size mt-10 text-orange-300 inline-block bg-amber-100/25 rounded-md font-Satoshi-B"
+    >
+      {"<"} ABOUT ME 😎{"/>"}
+    </h1>
+
+    <div
+      class="flex flex-col w-full mx-auto mt-[10vh] justify-between space-y-5 md:space-y-20"
+    >
+      <h2
+        class="text-3xl text-amber-500 text-left md:text-center tracking-widest underline underline-offset-4 decoration-2 decoration-pink-500/75 font-Satoshi-BLK"
+      >
+        What I do
+      </h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-12 font-Satoshi-B"
+      >
+        <Card aboutMe={"#Collaborate"} icon={"collborate"} />
+        <Card aboutMe={"#Innovate"} icon={"innovate"} />
+        <Card aboutMe={"#Explore"} icon={"explore"} />
+      </div>
+      <article class="text-center hidden md:block font-Satoshi-M">
+        <h2 class="text-3xl">
+          From building sleek <abbr
+            title="Single Page Application"
+            class="decoration-solid decoration-pink-800 text-amber-300"
+            >SPA</abbr
+          >s with React's frontend finesse to architecting efficient backends
+          with Node.js, <span class="text-orange-200"
+            >I specialize in creating dynamic web apps</span
+          >
+        </h2>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .custom-font-size {
+    font-size: clamp(1.5rem, 1.279rem + 2.745vw, 2.75rem);
+  }
+</style>

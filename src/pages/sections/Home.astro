@@ -1,0 +1,42 @@
+---
+import Social from "../../components/Social.astro";
+import DownloadButton from "../../components/DownloadButton.astro";
+import Profile from "../../components/Profile.astro";
+---
+
+<section
+  class="grid grid-cols-1 md:grid-cols-2 w-10/12 mx-auto my-auto gap-2 md:gap-8 min-h-[70vh] md:min-h-[90vh] mt-[10vh]"
+  id="home"
+>
+  <div
+    class="flex flex-col justify-center gap-2 md:gap-4 order-2 md:order-1 font-Satoshi-V"
+  >
+    <h3>HELLO 👋</h3>
+    <h2 class="text-lg md:text-2xl">I am Sushant Kumar</h2>
+    <p class="tracking-tight md:tracking-wider text-md md:text-lg">
+      <strong class="text-amber-100 text-lg md:text-xl font-Satoshi-B"
+        >Web developer 👨‍💻</strong
+      >, coding my way through the <strong
+        class="text-yellow-300 text-xl md:text-2xl font-Satoshi-BLK"
+      >
+        MERN</strong
+      >iverse 🌐 and jamming to the rhythm of tech 🎧, while hunting for job
+      opportunities 🚀.
+    </p>
+
+    <Social />
+
+    <div class="pt-5 flex gap-5">
+      <DownloadButton />
+      <a href="#projects">
+        <button
+          class="bg-fiord-50 text-fiord-950 border-fiord-950 rounded py-2 px-4 hover:bg-fiord-200"
+          >PROJECTS</button
+        >
+      </a>
+    </div>
+  </div>
+  <div class="flex items-center justify-center order-1 md:order-2">
+    <Profile />
+  </div>
+</section>
